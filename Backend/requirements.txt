@@ -1,1 +1,14 @@
-
+fastapi
+uvicorn[standard]
+fastapi-cors
+python-multipart
+langchain
+langchain-google-genai
+chromadb
+sentence-transformers
+unstructured[local-inference]
+pillow
+requests
+pypdf
+psycopg2-binary
+sqlalchemy
