@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  backend:
+    build: ./Backend
+    container_name: dockuchat-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./Backend:/app
+    env_file:
+      - ./Backend/.env
+    depends_on:
+      - frontend
+
+  frontend:
+    build: ./Frontend
+    container_name: dockuchat-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./Frontend:/app
