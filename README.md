@@ -13,22 +13,10 @@ DockuChat is a **multi-modal RAG (Retrieval-Augmented Generation) chat applicati
 
 ---
 
-## 🛠️ Tech Stack  
-
-**Frontend (React + Vite)**  
-- ⚛️ React 18  
-- 🎨 TailwindCSS  
-- 📦 Axios (API requests)  
-- 📝 React-Markdown + Remark-GFM  
-
-**Backend (Python FastAPI)**  
-- 🚀 FastAPI (REST API)  
-- 🧠 RAG pipeline (LLM integration, embeddings, retrieval)  
-- 📄 Document parsing utilities  
-
-**Deployment**  
-- 🐳 Docker + Docker Compose  
-- 🔄 Multi-service orchestration (Frontend + Backend)  
+## 🛠️ Tech Stack
+- **Backend:** FastAPI, Python
+- **Frontend:** React, Vite, TailwindCSS
+- **Deployment:** Docker, Docker Compose
 
 ---
 
