@@ -8,14 +8,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from rag_pipeline import (
     process_and_store_document,
     create_rag_chain,
-    delete_document_vectors,  # <-- IMPORT THE NEW FUNCTION
+    delete_document_vectors,
     UPLOAD_DIRECTORY
 )
 
 app = FastAPI(
     title="Multimodal RAG Project API",
     description="API for uploading, managing, and querying documents for a RAG pipeline.",
-    version="2.1.0",  # Version bump for new feature
+    version="2.1.0",
 )
 
 origins = [
