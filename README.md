@@ -36,17 +36,23 @@ DockuChat is a **multi-modal RAG (Retrieval-Augmented Generation) chat applicati
 
 ```
 DockuChat/
-├── Frontend/        # React + Vite frontend
-│   ├── src/
-│   └── package.json
+│── Backend/
+│   ├── .env                # Environment variables
+│   ├── .gitignore          # Git ignore rules for backend
+│   ├── Dockerfile          # Dockerfile for backend
+│   ├── api.py              # FastAPI entrypoint
+│   ├── rag_pipeline.py     # RAG pipeline implementation
+│   ├── requirements.txt    # Python dependencies
 │
-├── Backend/         # FastAPI backend
-│   ├── app/
-│   ├── requirements.txt
-│   └── .env.example
+│── Frontend/
+│   ├── node_modules/       # Frontend dependencies (ignored in git)
+│   ├── public/             # Static files
+│   ├── src/                # React source code
+│   ├── package.json        # NPM package config
+│   ├── vite.config.js      # Vite configuration
 │
-├── docker-compose.yml
-└── README.md
+│── docker-compose.yaml     # Compose file for multi-service setup
+│── README.md               # Documentation
 ```
 
 ---
@@ -59,14 +65,9 @@ git clone https://github.com/Chayan-03/DockuChat.git
 cd DockuChat
 ```
 
-### 2️⃣ Setup Environment  
 
-**Backend** requires an `.env` file. Create `Backend/.env` from `.env.example` and add your API keys:  
-```ini
-OPENAI_API_KEY=your_key_here
-```
 
-### 3️⃣ Run with Docker Compose  
+### 2️⃣ Run with Docker Compose  
 ```bash
 docker compose up --build
 ```
@@ -82,7 +83,7 @@ Run backend:
 ```bash
 cd Backend
 pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
+uvicorn app.main:app --reload 
 ```
 
 Run frontend:  
